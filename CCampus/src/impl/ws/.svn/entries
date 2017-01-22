@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   name=""
+   repos="https://st-svn.info.fundp.ac.be/svn/INFOB318_2012-2013_deborchf"
+   revision="26"
+   last-author="lkeil"
+   url="https://st-svn.info.fundp.ac.be/svn/INFOB318_2012-2013_deborchf/CCampus/src/impl/ws"
+   committed-rev="26"
+   kind="dir"
+   committed-date="2012-12-12T19:59:11.709000Z"/>
+<entry
+   name="AnnonceWS.java"
+   revision="41"
+   checksum="c171264b0f0b1148068a556a385964a4"
+   last-author="lkeil"
+   text-time="2012-12-16T12:26:41.726000Z"
+   committed-rev="41"
+   kind="file"
+   committed-date="2012-12-16T13:47:01.619000Z"/>
+<entry
+   name="AnnoncesWS.java"
+   revision="41"
+   checksum="b9a44a506dcfe9cb6583e104ba83f1c5"
+   last-author="lkeil"
+   text-time="2012-12-16T13:27:51.699000Z"
+   committed-rev="41"
+   kind="file"
+   committed-date="2012-12-16T13:47:01.619000Z"/>
+<entry
+   name="CourseToolWS.java"
+   revision="41"
+   checksum="e264f0c7add581c2b49d6d0a43a857ca"
+   last-author="lkeil"
+   text-time="2012-12-16T13:32:19.540000Z"
+   committed-rev="41"
+   kind="file"
+   committed-date="2012-12-16T13:47:01.619000Z"/>
+<entry
+   name="CourseWS.java"
+   revision="41"
+   checksum="721ca767252da9d5dea2e1e536921306"
+   last-author="lkeil"
+   text-time="2012-12-16T12:36:52.577000Z"
+   committed-rev="41"
+   kind="file"
+   committed-date="2012-12-16T13:47:01.619000Z"/>
+<entry
+   name="CoursesWS.java"
+   revision="41"
+   checksum="54d782f4da570a91bc2621b9102db255"
+   last-author="lkeil"
+   text-time="2012-12-16T13:40:06.997000Z"
+   committed-rev="41"
+   kind="file"
+   committed-date="2012-12-16T13:47:01.619000Z"/>
+<entry
+   name="DocWS.java"
+   revision="41"
+   checksum="682ee7cc5c830e1e9a96927473cf286b"
+   last-author="lkeil"
+   text-time="2012-12-16T12:46:42.164000Z"
+   committed-rev="41"
+   kind="file"
+   committed-date="2012-12-16T13:47:01.619000Z"/>
+<entry
+   name="DocsAndFoldersWS.java"
+   revision="41"
+   checksum="85656ece3a416af3e200470a2e48746c"
+   last-author="lkeil"
+   text-time="2012-12-16T13:41:35.935000Z"
+   committed-rev="41"
+   kind="file"
+   committed-date="2012-12-16T13:47:01.619000Z"/>
+<entry
+   name="FolderWS.java"
+   revision="41"
+   checksum="0ff8fc795bf26aa683e7818b00bfcb87"
+   last-author="lkeil"
+   text-time="2012-12-16T12:48:06.785000Z"
+   committed-rev="41"
+   kind="file"
+   committed-date="2012-12-16T13:47:01.619000Z"/>
+<entry
+   name="SessionWS.java"
+   revision="35"
+   checksum="4868153c6cc20b82898867b50950e3cc"
+   last-author="lkeil"
+   text-time="2012-12-15T00:46:13.567000Z"
+   committed-rev="35"
+   kind="file"
+   committed-date="2012-12-15T00:48:59.911000Z"/>
+<entry
+   name="UpdateWS.java"
+   revision="41"
+   checksum="91b60ffee27549a4df7fadc59f6fd29e"
+   last-author="lkeil"
+   text-time="2012-12-16T12:50:28.602000Z"
+   committed-rev="41"
+   kind="file"
+   committed-date="2012-12-16T13:47:01.619000Z"/>
+<entry
+   name="UpdatesWS.java"
+   revision="41"
+   checksum="9fa4f6254ddfde97a87ddc8787e91093"
+   last-author="lkeil"
+   text-time="2012-12-16T13:45:22.476000Z"
+   committed-rev="41"
+   kind="file"
+   committed-date="2012-12-16T13:47:01.619000Z"/>
+<entry
+   name="UserDataWS.java"
+   revision="43"
+   checksum="1163b4fe06edce681dc1c23fb43f7d82"
+   last-author="lkeil"
+   text-time="2012-12-18T18:04:11.062000Z"
+   committed-rev="43"
+   kind="file"
+   committed-date="2012-12-18T18:06:05.352000Z"/>
+<entry
+   name="services"
+   kind="dir"/>
+</wc-entries>

@@ -1,0 +1,24 @@
+import java.io.BufferedInputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
+
+
+public class test1 {
+
+	public static void main(String[] args) throws Exception {
+		HttpURLConnection conn = (HttpURLConnection) new URL("https://chouettecampus.info.fundp.ac.be/module/MOBILE/index.php?Method=getUserData").openConnection();
+		conn.connect();
+
+		BufferedInputStream bis = new BufferedInputStream(conn.getInputStream());
+
+		byte[] bytes = new byte[1024];
+		int tmp ;
+		while( (tmp = bis.read(bytes) ) != -1 ) {
+			String chaine = new String(bytes,0,tmp);
+			System.out.print(chaine);
+		}
+		
+		conn.disconnect();
+	}
+	
+}

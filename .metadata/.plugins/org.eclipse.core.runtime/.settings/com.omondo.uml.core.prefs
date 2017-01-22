@@ -1,0 +1,6 @@
+UMLClassDiagramPreference.linkProperties.cardinality=0..1
+UMLClassDiagramPreference.linkProperties.directed=&Automatic
+UMLClassDiagramPreference.linkProperties.member.visibility=pr&ivate
+UMLClassDiagramPreference.linkProperties.type=Asso&ciation
+UMLPreference.style=Eclipse
+eclipse.preferences.version=1

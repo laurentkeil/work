@@ -1,0 +1,50 @@
+import java.net.*;
+import java.io.*;
+
+/**
+ * @author sniperx21x
+ *
+ */
+public class testURL {
+
+	/**
+	 * @param args
+	 * @return 
+	 */
+	
+	public static void main(String[] args) {
+		testEncoreURL();
+	}
+	 
+	public void testURLConnexion() {
+		
+		String url = "http://localhost:8080/pro/connexion";
+		
+		try {
+			
+			URL monURL = new URL(url);
+			URLConnection connexion = monURL.openConnection();
+			
+			InputStream flux = connexion.getInputStream();
+			int l = connexion.getContentLength();
+			
+			for(;l != 0; l--)
+			System.out.print((char)flux.read());
+			
+			// Fermeture de la connexion
+			flux.close();
+			
+		} catch (Exception e) {
+				e.printStackTrace();
+		}
+		
+	}
+	
+	public void testEncodeURL() {
+		
+		String url = "http://www.test.fr/images perso/mon image.gif";
+		System.out.println(URLEncoder.encode(url));
+		
+	}
+
+}

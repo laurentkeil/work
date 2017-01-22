@@ -1,0 +1,112 @@
+
+package com.CCampus.forms;
+
+import java.io.*;
+import java.net.*;
+import java.util.*;
+
+import org.apache.http.*;
+import org.apache.http.cookie.*;
+import org.apache.http.client.*;
+import org.apache.http.client.entity.*;
+import org.apache.http.client.methods.*;
+import org.apache.http.impl.client.*;
+import org.apache.http.message.*;
+import org.apache.http.impl.cookie.BasicClientCookie;
+
+/**
+ * @author Keil Laurent
+ * @description enregistre l utilisateur ayant eu le droit de se connecter.
+ */
+public class Register {
+
+	/**
+	 * @descritpion cree un cookie pour l utilisateur connecte au serveur et ajoute le cookie a l url.
+	 * @param user
+	 * @param pw
+	 * @return 
+	 * @throws IOException
+	 */
+	public static String registerURL(String user, String pw) throws IOException {
+	   
+		BasicClientCookie cookie1 = new BasicClientCookie("cookie", "13r4er6d");
+		
+		List<String> keys = new ArrayList<String>();
+		List<String> values= new ArrayList<String>();
+		keys.add(cookie1.getName());
+		values.add(cookie1.getValue());
+		String retourPage = post("https://chouettecampus.info.fundp.ac.be/index.php",keys,values);
+	   	return retourPage;
+	  }
+	
+	/**
+	 * 
+	 * @param adress
+	 * @param keys
+	 * @param values
+	 * @return l url adress avec ses nouveaux parametres keys et values
+	 * @throws IOException
+	 */
+	public static String post(String adress,List<String> keys,List<String> values) throws IOException{
+		
+		String result = "";
+		OutputStreamWriter writer = null;
+		BufferedReader reader = null;
+		
+		try {
+			//encodage des paramètres de la requête
+			String data="";
+			for(int i=0;i<keys.size();i++){
+				if (i!=0) data += "&";
+				data +=URLEncoder.encode(keys.get(i), "UTF-8")+"="+URLEncoder.encode(values.get(i), "UTF-8");
+			}
+			
+			//création de la connection
+			URL url = new URL(adress);
+			URLConnection conn = url.openConnection();
+			conn.setDoOutput(true);
+			
+			
+			//envoi de la requête
+			writer = new OutputStreamWriter(conn.getOutputStream());
+			writer.write(data);
+			writer.flush();
+			
+			//lecture de la réponse
+			reader = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+			String ligne;
+			
+			while ((ligne = reader.readLine()) != null) {
+				result+=ligne;
+			}
+			
+		}catch (MalformedURLException e) {
+			e.printStackTrace();
+		}finally{
+			try{writer.close();}catch(Exception e){}
+			try{reader.close();}catch(Exception e){}
+		}
+		return result;
+	}
+	
+	/**
+	 * 
+	 * @param url
+	 * @return l url avec ses paramètres
+	 * @throws IOException
+	 */
+	
+	public static String get(String adress) throws IOException{
+		String source ="";
+		URL url = new URL(adress);
+		URLConnection yc = url.openConnection();
+		BufferedReader in = new BufferedReader(new InputStreamReader(yc.getInputStream()));
+		
+		String inputLine;
+		while ((inputLine = in.readLine()) != null) source +=inputLine;
+		in.close();
+		return source;
+	}
+	
+	
+}

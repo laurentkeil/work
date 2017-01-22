@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   name=""
+   repos="https://st-svn.info.fundp.ac.be/svn/INFOB318_2012-2013_deborchf"
+   revision="26"
+   last-author="lkeil"
+   url="https://st-svn.info.fundp.ac.be/svn/INFOB318_2012-2013_deborchf/CCampus/.settings"
+   committed-rev="26"
+   kind="dir"
+   committed-date="2012-12-12T19:59:11.709000Z"/>
+<entry
+   name="org.eclipse.jdt.core.prefs"
+   checksum="799ca72469749251db4ec95b4f72e5fc"
+   last-author="lkeil"
+   text-time="2012-11-18T07:15:10.000000Z"
+   committed-rev="26"
+   kind="file"
+   committed-date="2012-12-12T19:59:11.709000Z"/>
+</wc-entries>

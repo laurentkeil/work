@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   repos="https://st-svn.info.fundp.ac.be/svn/INFOB318_2012-2013_deborchf"
+   name=""
+   revision="25"
+   last-author="lkeil"
+   uuid="a72c366e-6d52-4acf-b08d-1750422794a5"
+   url="https://st-svn.info.fundp.ac.be/svn/INFOB318_2012-2013_deborchf/CCampus"
+   committed-rev="25"
+   kind="dir"
+   committed-date="2012-12-12T19:55:52.736040Z"/>
+<entry
+   name=".classpath"
+   revision="35"
+   checksum="d8a094cccde9d7594f9bbefc21fb915b"
+   last-author="lkeil"
+   committed-rev="35"
+   text-time="2012-12-14T23:42:43.729000Z"
+   kind="file"
+   committed-date="2012-12-15T00:48:59.911000Z"/>
+<entry
+   name=".fatjar"
+   revision="44"
+   checksum="3f7004723f1014797251acc2fc18bece"
+   last-author="lkeil"
+   text-time="2012-12-20T09:31:21.237000Z"
+   committed-rev="44"
+   kind="file"
+   committed-date="2012-12-21T22:54:08.547000Z"/>
+<entry
+   name=".project"
+   revision="26"
+   checksum="4f10cd51780089931f762572cbb51f97"
+   last-author="lkeil"
+   committed-rev="26"
+   text-time="2012-11-18T08:58:18.000000Z"
+   kind="file"
+   committed-date="2012-12-12T19:59:11.709000Z"/>
+<entry
+   name=".settings"
+   kind="dir"/>
+<entry
+   name=".umlproject"
+   revision="26"
+   checksum="68917e1df3ba5ff8338e08731772f798"
+   last-author="lkeil"
+   committed-rev="26"
+   text-time="2012-11-27T03:11:34.000000Z"
+   kind="file"
+   committed-date="2012-12-12T19:59:11.709000Z"/>
+<entry
+   name="CCampus.jar"
+   revision="32"
+   kind="file"
+   deleted="true"/>
+<entry
+   name="CCampus2.jar"
+   revision="0"
+   schedule="add"
+   kind="file"/>
+<entry
+   name="CCampusPlanning-chart.html"
+   revision="47"
+   checksum="d7c7042eba1232e98544a097a4f9db98"
+   last-author="lkeil"
+   text-time="2012-12-15T21:51:05.334000Z"
+   committed-rev="47"
+   kind="file"
+   committed-date="2012-12-21T23:08:26.031000Z"/>
+<entry
+   name="CCampusPlanning-resources.html"
+   revision="47"
+   checksum="4ec256158462b0590bfcc084e11c1e37"
+   last-author="lkeil"
+   text-time="2012-12-15T21:51:05.365000Z"
+   committed-rev="47"
+   kind="file"
+   committed-date="2012-12-21T23:08:26.031000Z"/>
+<entry
+   name="CCampusPlanning-tasks.html"
+   revision="47"
+   checksum="2a15e1026815f8bbbd16532a28943a01"
+   last-author="lkeil"
+   text-time="2012-12-15T21:51:05.272000Z"
+   committed-rev="47"
+   kind="file"
+   committed-date="2012-12-21T23:08:26.031000Z"/>
+<entry
+   name="CCampusPlanning.gan"
+   revision="47"
+   checksum="d3314d75a8ae83df0bb81bd246d8fef2"
+   last-author="lkeil"
+   text-time="2012-12-15T21:50:23.327000Z"
+   committed-rev="47"
+   kind="file"
+   committed-date="2012-12-21T23:08:26.031000Z"/>
+<entry
+   name="CCampusPlanning.html"
+   revision="47"
+   checksum="5a81cc36c6e1c6e5f5596baf3b853ca5"
+   last-author="lkeil"
+   text-time="2012-12-15T21:51:05.069000Z"
+   committed-rev="47"
+   kind="file"
+   committed-date="2012-12-21T23:08:26.031000Z"/>
+<entry
+   name="CCampusPlanning.pdf"
+   revision="47"
+   checksum="d0509bcdf49513e1e9850c82a3844c83"
+   last-author="lkeil"
+   text-time="2012-12-15T21:51:26.612000Z"
+   committed-rev="47"
+   kind="file"
+   committed-date="2012-12-21T23:08:26.031000Z"/>
+<entry
+   name="CCampusPlanning.png"
+   revision="47"
+   checksum="4287f9e3e4a44e025ee52eeccf87329e"
+   last-author="lkeil"
+   text-time="2012-12-15T21:51:37.454000Z"
+   committed-rev="47"
+   kind="file"
+   committed-date="2012-12-21T23:08:26.031000Z"
+   prop-time="2012-12-21T23:02:59.602000Z"/>
+<entry
+   name="CCampusPlanning.res.png"
+   revision="47"
+   checksum="3f3796a1d8354b675eefb1d390cd638b"
+   last-author="lkeil"
+   text-time="2012-12-15T21:51:04.663000Z"
+   committed-rev="47"
+   kind="file"
+   committed-date="2012-12-21T23:08:26.031000Z"
+   prop-time="2012-12-21T23:03:00.854000Z"/>
+<entry
+   name="CCampusUML.png"
+   revision="30"
+   checksum="01f513b932845b4dc1804486a96c2e8d"
+   last-author="lkeil"
+   committed-rev="30"
+   text-time="2012-12-13T22:49:52.386000Z"
+   kind="file"
+   committed-date="2012-12-13T22:59:03.612000Z"
+   prop-time="2012-12-12T19:58:36.185000Z"/>
+<entry
+   name="CCampusUML.ucls"
+   revision="30"
+   checksum="ccb946b6c26892baa88fb0cf66057964"
+   last-author="lkeil"
+   committed-rev="30"
+   text-time="2012-12-13T22:49:51.798000Z"
+   kind="file"
+   committed-date="2012-12-13T22:59:03.612000Z"/>
+<entry
+   name="CCampus_fat.jar"
+   revision="44"
+   checksum="4e250240307b0e77f97749367a46a490"
+   last-author="lkeil"
+   text-time="2012-12-20T09:32:11.051000Z"
+   committed-rev="44"
+   kind="file"
+   committed-date="2012-12-21T22:54:08.547000Z"
+   prop-time="2012-12-14T19:55:28.131000Z"/>
+<entry
+   name="javadoc"
+   schedule="add"
+   kind="dir"/>
+<entry
+   name="lib"
+   schedule="add"
+   kind="dir"/>
+<entry
+   name="lib.zip"
+   revision="0"
+   schedule="add"
+   kind="file"/>
+<entry
+   name="projet.zip"
+   revision="46"
+   checksum="265aced1cc96fe4231937a6e2f4e2b3e"
+   last-author="lkeil"
+   committed-rev="46"
+   text-time="2012-12-21T22:58:29.208000Z"
+   kind="file"
+   committed-date="2012-12-21T23:07:36.580000Z"
+   prop-time="2012-12-21T23:03:00.937000Z"/>
+<entry
+   name="spec.txt"
+   revision="45"
+   checksum="4619eedda7aca2a1f36a50f906a5610c"
+   last-author="lkeil"
+   committed-rev="45"
+   text-time="2012-12-16T14:06:59.976000Z"
+   kind="file"
+   committed-date="2012-12-21T23:06:00.624000Z"/>
+<entry
+   name="src"
+   kind="dir"/>
+<entry
+   name="uml diagram"
+   kind="dir"/>
+</wc-entries>

@@ -1,0 +1,37 @@
+import java.net.*;
+import java.io.*;
+
+/**
+ * @author sniperx21x
+ *
+ */
+public class testURL {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		
+		String url = "http://www.jmdoudoux.fr/java/dej/chap-net.htm";
+		
+		try {
+			
+			URL monURL = new URL(url);
+			URLConnection connexion = monURL.openConnection();
+			
+			InputStream flux = connexion.getInputStream();
+			int l = connexion.getContentLength();
+			
+			for(;l != 0; l--)
+			System.out.print((char)flux.read());
+			
+			// Fermeture de la connexion
+			flux.close();
+			
+		} catch (Exception e) {
+				e.printStackTrace();
+		}
+		
+	}
+
+}

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   name=""
+   repos="https://st-svn.info.fundp.ac.be/svn/INFOB318_2012-2013_deborchf"
+   revision="26"
+   last-author="lkeil"
+   url="https://st-svn.info.fundp.ac.be/svn/INFOB318_2012-2013_deborchf/CCampus/src/api"
+   committed-rev="26"
+   kind="dir"
+   committed-date="2012-12-12T19:59:11.709000Z"/>
+<entry
+   name="Annonce.java"
+   checksum="60f33fb41b6b71e93a00ffcef1ab2fdb"
+   last-author="lkeil"
+   committed-rev="26"
+   text-time="2012-12-10T22:37:00.041000Z"
+   kind="file"
+   committed-date="2012-12-12T19:59:11.709000Z"/>
+<entry
+   name="Annonces.java"
+   revision="32"
+   checksum="475eda78e68eff0056dbd6590ac1fd25"
+   last-author="lkeil"
+   committed-rev="32"
+   text-time="2012-12-14T17:08:23.720000Z"
+   kind="file"
+   committed-date="2012-12-14T19:31:48.136000Z"/>
+<entry
+   name="Course.java"
+   checksum="15210b10b7cc78f012e09f3cc59b02d8"
+   last-author="lkeil"
+   committed-rev="26"
+   text-time="2012-12-11T17:45:25.998000Z"
+   kind="file"
+   committed-date="2012-12-12T19:59:11.709000Z"/>
+<entry
+   name="CourseTool.java"
+   checksum="e901f270e9daf45b68883ad1a09c6a40"
+   last-author="lkeil"
+   committed-rev="26"
+   text-time="2012-12-10T22:38:08.120000Z"
+   kind="file"
+   committed-date="2012-12-12T19:59:11.709000Z"/>
+<entry
+   name="Courses.java"
+   revision="32"
+   checksum="206e4ea4071eae1d3e3cb23f986a34eb"
+   last-author="lkeil"
+   committed-rev="32"
+   text-time="2012-12-14T17:41:35.949000Z"
+   kind="file"
+   committed-date="2012-12-14T19:31:48.136000Z"/>
+<entry
+   name="Doc.java"
+   checksum="ac4ab1888994db54ae954f067f9dddfd"
+   last-author="lkeil"
+   committed-rev="26"
+   text-time="2012-12-10T22:38:27.105000Z"
+   kind="file"
+   committed-date="2012-12-12T19:59:11.709000Z"/>
+<entry
+   name="DocsAndFolders.java"
+   revision="32"
+   checksum="b25ec32924c3a8f9e4248529e728a763"
+   last-author="lkeil"
+   committed-rev="32"
+   text-time="2012-12-14T19:11:33.652000Z"
+   kind="file"
+   committed-date="2012-12-14T19:31:48.136000Z"/>
+<entry
+   name="Folder.java"
+   checksum="c9b578ffaef55d9cf5f86cdcdd110368"
+   last-author="lkeil"
+   committed-rev="26"
+   text-time="2012-12-10T22:39:02.221000Z"
+   kind="file"
+   committed-date="2012-12-12T19:59:11.709000Z"/>
+<entry
+   name="Session.java"
+   revision="32"
+   checksum="31d5b59e3315e9e1aa924379fac85aed"
+   last-author="lkeil"
+   committed-rev="32"
+   text-time="2012-12-14T14:17:43.399000Z"
+   kind="file"
+   committed-date="2012-12-14T19:31:48.136000Z"/>
+<entry
+   name="Update.java"
+   revision="38"
+   checksum="68cfa0b8f8423437d6793a958320f84b"
+   last-author="lkeil"
+   committed-rev="38"
+   text-time="2012-12-15T19:17:13.446000Z"
+   kind="file"
+   committed-date="2012-12-15T21:41:36.238000Z"/>
+<entry
+   name="Updates.java"
+   revision="41"
+   checksum="094b12897da69883b6b7c0326bd74445"
+   last-author="lkeil"
+   committed-rev="41"
+   text-time="2012-12-16T13:04:43.125000Z"
+   kind="file"
+   committed-date="2012-12-16T13:47:01.619000Z"/>
+<entry
+   name="UserData.java"
+   checksum="e2932538796885babdc0dd5c4eb1ae7f"
+   last-author="lkeil"
+   committed-rev="26"
+   text-time="2012-12-10T22:39:39.302000Z"
+   kind="file"
+   committed-date="2012-12-12T19:59:11.709000Z"/>
+</wc-entries>

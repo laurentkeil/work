@@ -1,0 +1,187 @@
+import api.Courses;
+import api.Session;
+import api.Update;
+
+/**
+ * Classe d'exemple d'utilisation et de test de l'application.
+ * @author Keil Laurent
+ */
+public class Example {
+
+	/**
+	 * exemple d 'utilisation des webservices en implémentation mock avec données tests.
+	 * @throws Exception
+	 */
+	public static void exampleMock() throws Exception{
+		
+		final Session session = FactorySession.getSession("claro", "Pee6eid0");
+        
+        System.out.println("---MODE MOCK---\n\nUserData :\n__________\n");
+        
+        System.out.println("userID : " + session.getUserData().getUserId());
+        System.out.println("username : " + session.getUserData().getUsername());
+        
+        for(int i = 0; i < session.getUpdates().nbUpdates(); i++) {
+        	Update up = session.getUpdates().getUpdatesTab()[i];
+        	System.out.println("\nupdate "+ (i+1) +": \n_________\n\ncours : " + up.getSysCode() + "\nmodule : " + up.getTagModule() + "\nressource : " + up.getResID() + "\ndate de modif : " + up.getDate() + "\n");
+        }
+        
+        System.out.println("\nCours :\n_______\n");
+        
+        Courses c = session.getCourses();
+        System.out.println("nbCours : " + c.nbCours());
+        for (int i = 0; i < c.nbCours(); i++) {
+            System.out.println("cours "+ (i+1) + " id : " + c.getAllCoursesID()[i]);
+            System.out.println("cours "+ (i+1) + " syscode : " + c.getAllCoursesSyscode()[i]);
+		}
+        
+        System.out.println("\n------------------------");
+        
+        System.out.println("titulaire : " + c.getCourse("SANDBOX").getTitular());
+        System.out.println("titre : " + c.getCourse(2).getTitle());
+        
+        System.out.println("\ndocuments ? : " + c.getCourse(2).getCourseTool().isDnL());
+        System.out.println("annonces ? : " + c.getCourse(2).getCourseTool().isAnn());
+        
+        System.out.println("\n    Annonces :\n    ________");
+        
+        for (int i = 0; i < c.getCourse(2).getAnnonces().nbAnnonces(); i++) {
+        	System.out.println("\ntitre annonces "+ (i+1) + " : " + c.getCourse(2).getAnnonces().getAllAnnoncesTitle()[i]);
+        	System.out.println("id annonces "+ (i+1) + " : " + c.getCourse(2).getAnnonces().getAllAnnoncesID()[i]);
+        }
+        
+        System.out.println("\n------------------------");
+
+        System.out.println("\ncontenu annonce 5 : " + c.getCourse(2).getAnnonces().getAnnonce("annonce 5").getContent());
+        System.out.println("visible ? : " + c.getCourse(2).getAnnonces().getAnnonce("annonce 5").isVisible());
+
+        System.out.println("\n    Docs et Folders :\n    _______________\n");
+
+        for (int i = 0; i < c.getCourse(2).getDocs().nbDocs(); i++) {
+        	System.out.println("\ndoc name : " + c.getCourse(2).getDocs().getDocsName()[i]);
+        }
+        for (int i = 0; i < c.getCourse(2).getDocs().nbFolders(); i++) {
+        	System.out.println("\ndossier name : " + c.getCourse(2).getDocs().getFoldersName()[i]);
+        }
+        
+        System.out.println("\n------------------------");
+        
+    	System.out.println("\ndossier date : " + c.getCourse(2).getDocs().getFolder("chouette folder 2").getDate());
+    	System.out.println("dossier description : " + c.getCourse(2).getDocs().getFolder("chouette folder 2").getDescription());
+    	System.out.println("dossier path : " + c.getCourse(2).getDocs().getFolder("chouette folder 2").getPath());
+    	
+    	System.out.println("\ndoc date 2 : " + c.getCourse(2).getDocs().getDoc("chouette document 2").getDate());
+    	System.out.println("doc description 2 : " + c.getCourse(2).getDocs().getDoc("chouette document 2").getDescription());
+    	System.out.println("doc path 2 : " + c.getCourse(2).getDocs().getDoc("chouette document 2").getPath());
+    	
+    	System.out.println("\ndoc path 1 : " + c.getCourse(2).getDocs().getDoc("chouette document 1").getPath());
+    	System.out.println("doc name 1 : " + c.getCourse(2).getDocs().getDoc("chouette document 1").getName());
+    	System.out.println("doc url 1 : " + c.getCourse(2).getDocs().getDoc("chouette document 1").getUrl());
+
+    
+        System.out.println("\n");
+        session.closeSession();
+        
+        
+	}
+	
+	
+	/**
+	 * exemple d 'utilisation des webservices en implémentation WS avec données du serveur claroline.
+	 * @throws Exception
+	 */
+	public static void exampleWS() throws Exception{
+		
+		final Session session = FactorySession.getSession("claro","Pee6eid0");
+        
+		System.out.println("Connexion réalisée avec les information :\n\n");
+		
+        System.out.println("---MODE WS---\n\nUserData :\n__________\n");
+        
+        System.out.println("userID : " + session.getUserData().getUserId());
+        System.out.println("username : " + session.getUserData().getUsername());
+
+        for(int i = 0; i < session.getUpdates().nbUpdates(); i++) {
+        	Update up = session.getUpdates().getUpdatesTab()[i];
+        	System.out.println("\nupdate "+ (i+1) +": \n_________\n\ncours : " + up.getSysCode() + "\nmodule : " + up.getTagModule() + "\nressource : " + up.getResID() + "\ndate de modif : " + up.getDate() + "\n");
+        }
+        
+        System.out.println("\nCours :\n_______\n");
+        
+        Courses c = session.getCourses();
+        System.out.println("nbCours : " + c.nbCours());
+        for (int i = 0; i < c.nbCours(); i++) {
+            System.out.println("cours "+ (i+1) + " id : " + c.getAllCoursesID()[i]);
+            System.out.println("cours "+ (i+1) + " syscode : " + c.getAllCoursesSyscode()[i]);
+		}
+        
+        System.out.println("\n------------------------");
+        
+        System.out.println("\ntitulaire : " + c.getCourse(3).getTitular());
+        System.out.println("titre : " + c.getCourse("B120").getTitle());
+        
+        System.out.println("\ndocuments notif ? : " + c.getCourse("B120").getCourseTool().dnlNotif());
+        System.out.println("annonces module ? : " + c.getCourse(5).getCourseTool().isAnn());
+        
+        System.out.println("\n    Annonces :\n    ________");
+        
+        for (int i = 0; i < c.getCourse(3).getAnnonces().nbAnnonces(); i++) {
+        	System.out.println("\ntitre annonces "+ (i+1) + " : " + c.getCourse(3).getAnnonces().getAllAnnoncesTitle()[i]);
+        	System.out.println("id annonces "+ (i+1) + " : " + c.getCourse(3).getAnnonces().getAllAnnoncesID()[i]);
+        }
+        
+        System.out.println("\n------------------------");
+        
+        System.out.println("\ncontenu annonce id 1 - titre bonjour : " + c.getCourse("H1").getAnnonces().getAnnonce("bonjour").getContent());
+        System.out.println("visible ? : " + c.getCourse(3).getAnnonces().getAnnonce("test").isVisible());
+
+        System.out.println("\n    Docs et Folders :\n    _______________\n");
+        
+        for (int i = 0; i < c.getCourse(3).getDocs().nbDocs(); i++) {
+        	System.out.println("doc name : " + c.getCourse(3).getDocs().getDocsName()[i]);
+        }
+        for (int i = 0; i < c.getCourse(3).getDocs().nbFolders(); i++) {
+        	System.out.println("dossier name : " + c.getCourse(3).getDocs().getFoldersName()[i]);
+        }
+
+        System.out.println("\n------------------------");
+        
+    	System.out.println("\ndossier date : " + c.getCourse(3).getDocs().getFolder("salut").getDate());
+    	System.out.println("dossier description : " + c.getCourse(3).getDocs().getFolder("salut").getDescription());
+    	System.out.println("dossier path : " + c.getCourse(3).getDocs().getFolder("salut").getPath());
+    	
+    	System.out.println("\ndoc date 2 : " + c.getCourse(3).getDocs().getDoc("Example_document").getDate());
+    	System.out.println("doc description 2 : " + c.getCourse(3).getDocs().getDoc("Example_document").getDescription());
+    	System.out.println("doc path 2 : " + c.getCourse(3).getDocs().getDoc("Example_document").getPath());
+    	
+    	System.out.println("\ndoc path 1 : " + c.getCourse(3).getDocs().getDoc("myfirstwebproject_-1-").getPath());
+    	System.out.println("doc name 1 : " + c.getCourse(3).getDocs().getDoc("myfirstwebproject_-1-").getName());
+    	System.out.println("doc url 1 : " + c.getCourse("H1").getDocs().getDoc("myfirstwebproject_-1-").getUrl());
+
+    	
+        System.out.println("\n");
+        session.closeSession();  
+        System.out.println("Déconnexion...\n");
+
+        
+        /*preuve de déconnexion => exception.
+        	System.out.println("\ndocuments notif ? : " + c.getCourse("B120").getCoursID());
+        */
+        
+        //preuve de reconnexion possible
+        final Session session2 = FactorySession.getSession("sncbforever","sncb");
+        
+		System.out.println("\nConnexion réalisée avec les information :\n\n");
+		
+        System.out.println("---MODE WS---\n\nUserData :\n__________\n");
+        
+        System.out.println("userID : " + session2.getUserData().getUserId());
+        System.out.println("username : " + session2.getUserData().getUsername());
+
+        for(int i = 0; i < session2.getUpdates().nbUpdates(); i++) {
+        	Update up = session2.getUpdates().getUpdatesTab()[i];
+        	System.out.println("\nupdate "+ (i+1) +": \n_________\n\ncours : " + up.getSysCode() + "\nmodule : " + up.getTagModule() + "\nressource : " + up.getResID() + "\ndate de modif : " + up.getDate() + "\n");
+        }
+	}
+	
+}

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="lib" path="C:/Users/timmy/work/CCampus/lib/CCampus_fat.jar"/>
+	<classpathentry kind="lib" path="C:/Users/timmy/work/CCampus/lib/commons-codec-1.6.jar"/>
+	<classpathentry kind="lib" path="C:/Users/timmy/work/CCampus/lib/commons-httpclient-3.1-rc1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/timmy/work/CCampus/lib/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/timmy/work/CCampus/lib/fluent-hc-4.2.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/timmy/work/CCampus/lib/httpclient-4.2.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/timmy/work/CCampus/lib/httpclient-cache-4.2.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/timmy/work/CCampus/lib/httpcore-4.2.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/timmy/work/CCampus/lib/httpmime-4.2.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/timmy/work/CCampus/lib/json-org.jar"/>
+	<classpathentry kind="lib" path="C:/Users/timmy/work/CCampus/lib/jstl-1.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/timmy/work/CCampus/lib/org-openide-loaders.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

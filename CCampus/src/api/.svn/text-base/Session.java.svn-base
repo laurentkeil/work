@@ -1,0 +1,29 @@
+package api;
+
+/**
+ *  Implémentation des fonctionnalités de claroline pouvant etre utilisées sur la partie client. Crée une session et un cookie pour l'utilisateur voulant se connecter, accédant à ces fonctionnalités.
+ * @author Keil Laurent
+ * @version 1.1
+ */
+public interface Session {
+	/**
+	 * Ferme la session et libère les ressources éventuelles.</br>
+     * @throws Exception si l'utilisateur n'est pas connecté ou le cookie non-valide.
+	 */
+	void closeSession() throws Exception;
+    /**
+	 * @return un objet UserData contenant des informations pouvant être obtenues sur l'utilisateur connecté.
+     * @throws Exception si l'utilisateur n'est pas connecté ou le cookie non-valide.
+	 */ 
+    UserData getUserData() throws Exception;	
+	/**
+     * @return un objet Courses contenant des informations sur les cours de l'utilisateur connecté.
+     * @throws Exception si l'utilisateur n'est pas connecté ou le cookie non-valide.
+     */
+    Courses getCourses() throws Exception;
+    /**	 
+	 * @return un objet Updates contenant des informations sur les modifications apportées depuis la dernière connexion de l'utilisateur connecté.
+	 * @throws Exception si l'utilisateur n'est pas connecté ou le cookie non-valide.
+	 */
+    Updates getUpdates() throws Exception;
+}

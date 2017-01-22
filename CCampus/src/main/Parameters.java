@@ -1,0 +1,12 @@
+package main;
+/**
+ * paramètres pour passer d'un mode à l'autre (mock = consommation de données tests / WS = implémentation des web-services réels)
+ * @author Keil Laurent
+ */
+
+public class Parameters {
+    static public final int MOCK = 1;
+    static public final int WS = 2;
+    public final static int mode=WS;
+
+}

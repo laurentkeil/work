@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   name=""
+   repos="https://st-svn.info.fundp.ac.be/svn/INFOB318_2012-2013_deborchf"
+   revision="26"
+   last-author="lkeil"
+   url="https://st-svn.info.fundp.ac.be/svn/INFOB318_2012-2013_deborchf/CCampus/src/impl/ws/services"
+   committed-rev="26"
+   kind="dir"
+   committed-date="2012-12-12T19:59:11.709000Z"/>
+<entry
+   name="Claroline.java"
+   revision="34"
+   checksum="f0fc129af7927fb6f792d681ad7724ff"
+   last-author="lkeil"
+   committed-rev="34"
+   text-time="2012-12-14T20:06:53.422000Z"
+   kind="file"
+   committed-date="2012-12-14T20:16:02.693000Z"/>
+<entry
+   name="JsonConvertor.java"
+   revision="56"
+   checksum="7828e8ae97c30c2f6c9fe534caca5ba0"
+   last-author="lkeil"
+   committed-rev="56"
+   text-time="2013-01-29T12:43:19.793000Z"
+   kind="file"
+   committed-date="2013-01-31T20:48:56.855000Z"/>
+<entry
+   name="LazySSLSocketFactory.java"
+   checksum="b7a09aa836db8ad0681b5cd776b7a2b2"
+   last-author="lkeil"
+   committed-rev="26"
+   text-time="2012-12-10T11:51:08.940000Z"
+   kind="file"
+   committed-date="2012-12-12T19:59:11.709000Z"/>
+<entry
+   name="LazyTrustManager.java"
+   checksum="dab0044b1f938bce44cad764af535d76"
+   last-author="lkeil"
+   committed-rev="26"
+   text-time="2012-12-10T11:51:03.574000Z"
+   kind="file"
+   committed-date="2012-12-12T19:59:11.709000Z"/>
+<entry
+   name="Register.java"
+   revision="56"
+   checksum="30ac42d7b4f81476ef109ee437b80dae"
+   last-author="lkeil"
+   committed-rev="56"
+   text-time="2013-01-30T16:04:32.045000Z"
+   kind="file"
+   committed-date="2013-01-31T20:48:56.855000Z"/>
+<entry
+   name="Validation.java"
+   revision="42"
+   checksum="32b1bef2612a3dd62b78fa60b283d16b"
+   last-author="lkeil"
+   committed-rev="42"
+   text-time="2012-12-16T13:56:05.733000Z"
+   kind="file"
+   committed-date="2012-12-16T14:28:57.012000Z"/>
+</wc-entries>

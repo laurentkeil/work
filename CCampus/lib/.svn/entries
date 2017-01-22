@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   repos="https://st-svn.info.fundp.ac.be/svn/INFOB318_2012-2013_deborchf"
+   name=""
+   revision="0"
+   schedule="add"
+   url="https://st-svn.info.fundp.ac.be/svn/INFOB318_2012-2013_deborchf/CCampus/lib"
+   kind="dir"/>
+<entry
+   name="CCampus2.jar"
+   schedule="add"
+   kind="file"/>
+<entry
+   name="CCampus_fat.jar"
+   schedule="add"
+   kind="file"/>
+<entry
+   name="commons-codec-1.6.jar"
+   schedule="add"
+   kind="file"/>
+<entry
+   name="commons-httpclient-3.1-rc1.jar"
+   schedule="add"
+   kind="file"/>
+<entry
+   name="commons-logging-1.1.1.jar"
+   schedule="add"
+   kind="file"/>
+<entry
+   name="fluent-hc-4.2.2.jar"
+   schedule="add"
+   kind="file"/>
+<entry
+   name="httpclient-4.2.2.jar"
+   schedule="add"
+   kind="file"/>
+<entry
+   name="httpclient-cache-4.2.2.jar"
+   schedule="add"
+   kind="file"/>
+<entry
+   name="httpcore-4.2.2.jar"
+   schedule="add"
+   kind="file"/>
+<entry
+   name="httpmime-4.2.2.jar"
+   schedule="add"
+   kind="file"/>
+<entry
+   name="json-org.jar"
+   schedule="add"
+   kind="file"/>
+<entry
+   name="jstl-1.2.jar"
+   schedule="add"
+   kind="file"/>
+<entry
+   name="org-openide-loaders.jar"
+   schedule="add"
+   kind="file"/>
+</wc-entries>

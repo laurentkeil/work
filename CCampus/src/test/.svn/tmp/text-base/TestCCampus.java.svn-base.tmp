@@ -1,0 +1,49 @@
+
+package test;
+
+import static org.junit.Assert.*;
+import impl.ws.SessionWS;
+import api.Session;
+
+import org.junit.AfterClass;
+import org.junit.BeforeClass;
+import org.junit.Test;
+
+/**
+* Unit test du projet CCampus sur les données du mock.
+* @author Keil Laurent
+*/
+public class TestCCampus {
+	private Session sess2;
+	
+	@BeforeClass
+	public void testLogin() {
+		try{
+			this.sess2 = new SessionWS("claro", "Pee6eid0");
+		} catch(Exception e) {
+			fail("la session ne s'est pas ouverte correctement.");
+		}
+	}
+	
+	@AfterClass 
+	public void testLogout() {
+		try{
+			this.sess2 = new SessionWS("claro", "Pee6eid0");
+			sess2.closeSession();
+		} catch(Exception e) {
+			fail("la session ne s'est pas fermée correctement.");
+		}
+	}
+	
+	@Test 
+	public void testUser() {
+		try{
+			this.sess2 = new SessionWS("claro", "Pee6eid0");
+			assertEquals(sess2.getUserData().getUserId(), 1);
+			assertEquals(sess2.getUserData().getUsername(), "claro");
+		} catch(Exception e) {
+			fail("les données de l'utilisateur n'est pas correct.");
+		}
+	}
+	
+}

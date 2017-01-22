@@ -1,0 +1,164 @@
+Auteur : Keil Laurent
+Version 1.1
+
+Package api : ensemble d'interfaces de fonctionnalités consommant les WebServices auxquelles le module client peut accéder. (Répresentation sous forme de dépendance orienté objet).
+	
+	Session *  Implémentation des fonctionnalités de claroline pouvant etre utilisées sur la partie client. Crée une session et un cookie pour l'utilisateur voulant se connecter, accédant à ces fonctionnalités.
+		
+		UserData * permet d'obtenir des informations séparément sur l'utilisateur connecté.		
+		
+		Updates * Permet d'obtenir des informations sur les updates pour l'utilisateur connecté depuis sa dernière connexion.
+			Update * permet d'obtenir des informations séparément sur une modification particulière d'une ressource d'un module d'un cours de l'utilisateur connecté depuis sa dernière connexion.
+			
+		Courses * permet d'obtenir des informations sur les cours de l'utilisateur connecté.		
+			Course * permet d'obtenir des informations séparément sur un cours particulier de l'utilisateur connecté.
+				
+				CourseTool * permet d'obtenir des informations séparément sur les outils disponibles et nouveautés du cours cid de l'utilisateur connecté.		
+				
+				Annonces * permet d'obtenir des informations sur les annonces d'un cours particulier de l'utilisateur connecté.
+					Annonce * permet d'obtenir des informations sur une annonce particulère (ann) d'un cours particulier de l'utilisateur connecté.
+				
+				DocsAndFolders * permet d'obtenir des informations sur les documents et dossiers de documents (qui n'en contient pas forcément) d'un cours particulier de l'utilisateur connecté.
+					Doc * permet d'obtenir des informations sur un document particuler (doc) d'un cours particulier de l'utilisateur connecté.
+					Folder * permet d'obtenir des informations sur un dossier particulèr (folder) d'un cours particulier de l'utilisateur connecté.
+			
+
+Package impl.mock : implémentation de l'api en mock (données test).
+
+Package impl.ws : implémentation de l'api en webservices (données provenant d'un serveur).
+	 
+Package main : package principal utilisé pour démarer l'application.
+
+	Main est la fonction principale
+	Example propose un exemple d'utilisation des services de l'application en mode mock et un exemple en mode WebServices.
+	Parameters est utilisé pour déclarer les paramètres de l'application : mode MOCK ou WS
+	FactorySession lance l'application en mode MOCK ou WS suivant les paramètres définis dans Parameters
+
+Package test : tests unitaires des différentes methodes critiques.
+	
+	Authentification :
+	__________________
+	
+	le constructeur SessionWS fait appel a la classe Claroline qui authentifie le client par la classe validation et Register.
+	RegisterURL permet de se connecter au serveur grâce aux données du client, crée une session et renvoie les informations d'un cookie.
+	 
+	 closeSession
+	 ____________
+	 
+	On coupe la connexion et supprime le cookie.
+
+	UserData
+	________
+
+	contient les données suivantes pouvant être récupérer par des getters:
+
+	userId : int
+	username : String
+	firstName : String
+	lastName : String
+	language : String
+	isCourseCreator : boolean
+	isPlatformAdmin : boolean
+	officialCode : String
+		
+	
+	Course :
+	________
+	
+	contient les données suivantes pouvant être récupérer par des getters.
+	
+	cours_id : int
+	sysCode : String
+	directory : String
+	officialCode: String
+	db: String
+	title:String
+	titular:String
+	language:String
+	access:String
+	status:String
+	sourceCourseId:String
+	expirationDate:timestamp
+	creationDate:timestamp
+	isCourseManager:int
+	officialEmail:String
+	notified:boolean
+	
+	DESCRIPTION ???? A IMPLEMENTER
+
+	CourseTool : 
+	____________
+
+	contient les données suivantes pouvant être récupérer par des getters.
+	
+	sysCode : String
+	isAnn:boolean
+	annNotif:boolean
+	isDnL:boolean
+	dnlNotif:boolean
+
+	Doc :
+	_____
+	
+	contient les données suivantes pouvant être récupérer par des getters.
+	
+	path:String
+	name:String
+	type:int
+	size:int
+	date:String
+	extension:String
+	url:String
+	description:String
+	visibility:boolean
+	notified:boolean
+	
+	Folder : 
+	________
+
+	contient les données suivantes pouvant être récupérer par des getters.
+	
+	path:String
+	name:String
+	type:int
+	date:String
+	description:String
+	visibility:boolean
+	notified:boolean
+	
+	getAnnonces
+	___________
+	
+	contient les données suivantes pouvant être récupérer par des getters.
+	
+	title:String
+	content:String
+	visibleFrom:timestamp
+	visibleUntil:timestamp
+	visibility:boolean
+	rank:int
+	ressourceId:int
+	date:timestamp
+	notified:boolean
+	
+	Updates
+	_______
+	
+	contient un tableau pouvant être récupérer contenant les informations suivantes sur plusieurs updates possibles.
+	
+	SysCode:String
+	setTagModule:String
+	setResID:String
+	Date:String
+	
+	Je ne détaille pas les autres méthodes/classes... Voir JAVADOC.
+	
+
+Questions /problèmes :
+----------------------
+
+-ajouter description de cours.
+-déconnexion ? couper la connexion complètement et fermer l accès aux WS ?
+-contenu du cookie ?
+-connexion sur android ne marche pas.
+-déploiement sur webCampus.

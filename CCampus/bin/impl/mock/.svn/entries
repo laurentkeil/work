@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   repos="https://st-svn.info.fundp.ac.be/svn/INFOB318_2012-2013_deborchf"
+   name=""
+   revision="26"
+   last-author="lkeil"
+   url="https://st-svn.info.fundp.ac.be/svn/INFOB318_2012-2013_deborchf/CCampus/src/impl/mock"
+   committed-rev="26"
+   kind="dir"
+   committed-date="2012-12-12T19:59:11.709000Z"/>
+<entry
+   name="AnnoncesMock.java"
+   revision="41"
+   checksum="9c8504ba0bea6cd81d753821e905b9d3"
+   last-author="lkeil"
+   text-time="2012-12-16T13:28:22.630000Z"
+   committed-rev="41"
+   kind="file"
+   committed-date="2012-12-16T13:47:01.619000Z"/>
+<entry
+   name="CourseMock.java"
+   revision="41"
+   checksum="879f6fc84b6efadd472cac1368916d0d"
+   last-author="lkeil"
+   text-time="2012-12-16T12:37:03.414000Z"
+   committed-rev="41"
+   kind="file"
+   committed-date="2012-12-16T13:47:01.619000Z"/>
+<entry
+   name="CourseToolMock.java"
+   revision="41"
+   checksum="c5545f3e33d299d4730bc479a58ec2e3"
+   last-author="lkeil"
+   text-time="2012-12-16T12:40:19.774000Z"
+   committed-rev="41"
+   kind="file"
+   committed-date="2012-12-16T13:47:01.619000Z"/>
+<entry
+   name="CoursesMock.java"
+   revision="41"
+   checksum="33f390f5152c789174dbbbafd14734a5"
+   last-author="lkeil"
+   text-time="2012-12-16T13:40:28.222000Z"
+   committed-rev="41"
+   kind="file"
+   committed-date="2012-12-16T13:47:01.619000Z"/>
+<entry
+   name="DocsAndFoldersMock.java"
+   revision="41"
+   checksum="172a0ef43f1e32d990deed476dad3cdc"
+   last-author="lkeil"
+   text-time="2012-12-16T13:42:15.339000Z"
+   committed-rev="41"
+   kind="file"
+   committed-date="2012-12-16T13:47:01.619000Z"/>
+<entry
+   name="SessionMock.java"
+   revision="41"
+   checksum="d1b8b1d2d54f895725ff10e753d88aeb"
+   last-author="lkeil"
+   text-time="2012-12-16T12:37:36.212000Z"
+   committed-rev="41"
+   kind="file"
+   committed-date="2012-12-16T13:47:01.619000Z"/>
+<entry
+   name="UpdatesMock.java"
+   revision="41"
+   checksum="bf3fc4e6d7efca7d04f06f8ec892ed1c"
+   last-author="lkeil"
+   text-time="2012-12-16T13:45:46.221000Z"
+   committed-rev="41"
+   kind="file"
+   committed-date="2012-12-16T13:47:01.619000Z"/>
+<entry
+   name="UserDataMock.java"
+   revision="41"
+   checksum="9e67d62ae16447c06db1304452a475bc"
+   last-author="lkeil"
+   text-time="2012-12-16T13:07:35.455000Z"
+   committed-rev="41"
+   kind="file"
+   committed-date="2012-12-16T13:47:01.619000Z"/>
+</wc-entries>

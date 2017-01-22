@@ -1,0 +1,140 @@
+
+package impl.ws;
+
+import java.io.Serializable;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+/**
+ * implémention avec les données des webservices de Claroline.
+ * @author Keil Laurent
+ * @see api.Annonce
+ */
+public class AnnonceWS implements api.Annonce, Serializable {
+
+	/*
+	 * référence de sérialisation
+	 */
+	private static final long serialVersionUID = 6281038339301172369L;
+	private int ressourceId;	
+	private String title;
+	private String content;
+	private String visibleFrom;
+	private String visibleUntil;
+	private boolean visibility;
+	private int rank;
+	private String date;
+	private boolean notified;
+	
+	private JSONObject ann;
+
+	
+	/**
+	 * Constructeur de l'objet AnnonceWS.
+	 * @param annonce : un objet JSON contenant les informations sur une annonce particulière d'un cours de l'utilisateur connecté.
+	 */
+	public AnnonceWS(JSONObject annonce) {
+		this.ann = annonce;
+	}
+
+	@Override
+	public int getRessourceID() throws JSONException {	
+		String txt = null;
+		try {				
+			txt = ann.getString("ressourceId");	
+		} catch (JSONException e) {
+			e.printStackTrace();
+		}
+		ressourceId = Integer.parseInt(txt);
+		return ressourceId;
+	}
+	
+	@Override
+	public String getTitle() throws JSONException {
+		try {				
+			title = ann.getString("title");
+		} catch (JSONException e) {
+			e.printStackTrace();
+		}
+		return title;
+	} 
+	
+	@Override
+	public String getContent() throws JSONException {
+		try {				
+			content = ann.getString("content");
+		} catch (JSONException e) {
+			e.printStackTrace();
+		}
+		return content;
+	} 	
+
+	@Override
+	public String visibleFrom() throws JSONException {
+		try {				
+			visibleFrom = ann.getString("visibleFrom");
+		} catch (JSONException e) {
+			e.printStackTrace();
+		}
+		return visibleFrom;
+	} 
+	
+	@Override
+	public String visibleUntil() throws JSONException {
+		try {				
+			visibleUntil = ann.getString("visibleUntil");
+		} catch (JSONException e) {
+			e.printStackTrace();
+		}
+		return visibleUntil;
+	} 
+	
+	@Override
+	public boolean isVisible() throws JSONException {
+		String txt = null;
+		try {				
+			txt = ann.getString("visibility");	
+		} catch (JSONException e) {
+			e.printStackTrace();
+		}
+		visibility = Boolean.parseBoolean(txt);
+		return visibility;
+	}
+	
+	@Override
+	public int getRank() throws JSONException {	
+		String txt = null;
+		try {				
+			txt = ann.getString("rank");	
+		} catch (JSONException e) {
+			e.printStackTrace();
+		}
+		rank = Integer.parseInt(txt);
+		return rank;
+	}
+	
+	
+	@Override
+	public String getDate() throws JSONException {	
+		try {				
+			date = ann.getString("date");	
+		} catch (JSONException e) {
+			e.printStackTrace();
+		}
+		return date;
+	}	
+
+	@Override
+	public boolean notified() throws JSONException {
+		String txt = null;
+		try {				
+			txt = ann.getString("notified");	
+		} catch (JSONException e) {
+			e.printStackTrace();
+		}
+		notified = Boolean.parseBoolean(txt);
+		return notified;
+	}
+	
+}

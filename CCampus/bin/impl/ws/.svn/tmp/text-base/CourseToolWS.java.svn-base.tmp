@@ -1,0 +1,104 @@
+
+package impl.ws;
+
+
+import java.io.Serializable;
+
+import impl.ws.services.JsonConvertor;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+
+/**
+ * implémention avec les données des webservices de Claroline.
+ * @author Keil Laurent
+ * @see api.CourseTool
+ */
+public class CourseToolWS implements api.CourseTool, Serializable {
+
+	 /**
+	  * Référence de sérialisation
+	  */
+	private static final long serialVersionUID = -136588211266539191L;
+	private String url;
+	private String sysCode;
+	private boolean isAnn;
+	private boolean annNotif;
+	private boolean isDnL;
+	private boolean dnlNotif;
+	private JSONObject json = new JSONObject();
+	
+	/**
+	 * Constructeur de l'objet CourseTool
+	 * @param sysCode : code du cours de l'utilisateur pour lequel on obtient les outils disponibes et nouveautés.
+	 * @throws Exception : si l'utilisateur n'est pas connecté.
+	 */
+	public CourseToolWS(String sysCode) throws Exception{
+		this.url = "https://chouettecampus.info.fundp.ac.be/module/MOBILE/index.php?Method=getCourseToolList&cidReq=" + sysCode;
+		// Creating JSON Parser instance
+		JsonConvertor jParser = new JsonConvertor();
+				 
+				// getting JSON string from URL
+		this.json = jParser.getJSONObjectFromUrl(url);		
+	}
+
+	@Override
+	public String getSysCode() throws JSONException {
+		try {				
+			sysCode = json.getString("SysCode");
+		} catch (JSONException e) {
+			e.printStackTrace();
+		}
+		return sysCode;
+	}
+	
+	@Override
+	public boolean isAnn() throws JSONException {
+		String txt = null;
+		try {				
+			txt = json.getString("isAnn");	
+		} catch (JSONException e) {
+			e.printStackTrace();
+		}
+		isAnn = Boolean.parseBoolean(txt);
+		return isAnn;
+	}
+	
+	@Override
+	public boolean isDnL() throws JSONException {
+		String txt = null;
+		try {				
+			txt = json.getString("isDnL");	
+		} catch (JSONException e) {
+			e.printStackTrace();
+		}
+		isDnL = Boolean.parseBoolean(txt);
+		return isDnL;
+	}
+	
+	@Override
+	public boolean annNotif() throws JSONException {
+		String txt = null;
+		try {				
+			txt = json.getString("annNotif");	
+		} catch (JSONException e) {
+			e.printStackTrace();
+		}
+		annNotif = Boolean.parseBoolean(txt);
+		return annNotif;
+	}
+	
+	@Override
+	public boolean dnlNotif() throws JSONException {
+		String txt = null;
+		try {				
+			txt = json.getString("dnlNotif");	
+		} catch (JSONException e) {
+			e.printStackTrace();
+		}
+		dnlNotif = Boolean.parseBoolean(txt);
+		return dnlNotif;
+	}
+
+}

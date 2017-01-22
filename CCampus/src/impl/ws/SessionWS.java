@@ -1,0 +1,91 @@
+package impl.ws;
+
+import java.io.Serializable;
+
+import impl.ws.services.Claroline;
+import impl.ws.services.Register;
+
+import api.Courses;
+import api.Updates;
+import api.UserData;
+
+/**
+ * implémention avec les données des webservices de Claroline.
+ * crée une session en mode webservices.
+ * @see api.Session
+ * @see java.io.Serializable
+ * @author Keil Laurent 
+ */
+public class SessionWS implements api.Session , Serializable {
+
+	 /**
+	  * Référence de sérialisation
+	  */
+	private static final long serialVersionUID = 9080120697271122979L;
+	/**
+	 * Valeur du cookie du client
+	 */
+	private String token = null;
+	/**
+	 * booleen deco = false si l'utilisateur est connecté, true sinon
+	 */
+	public static boolean deco;
+	
+	/**
+	 * @throws Exception : un champ vide a ete constate
+	 * Constructeur de l'objet Session, creant une connexion avec claroline et met à jour le token.
+	 */
+	public SessionWS(String user, String password) throws Exception {
+		this.token = Claroline.login(user,password);
+		SessionWS.deco = false;
+	}
+	
+	@Override
+	public void closeSession () throws Exception{		
+		if(token != null && !SessionWS.deco){
+			Register.post.releaseConnection();
+			this.token = null;
+			SessionWS.deco = true;
+		}
+		else{
+			throw new Exception("cookie de connexion non-valide.");
+		}
+	}
+	
+	@Override
+	public UserData getUserData () throws Exception{
+		UserData userdata = null;
+		if(token != null && !SessionWS.deco){
+			userdata = new UserDataWS();
+		}
+		else{
+			throw new Exception("cookie de connexion non-valide.");
+		}
+		return userdata;
+	}
+	
+	@Override
+	public Courses getCourses() throws Exception {
+		Courses courses = null;
+		if(token != null && !SessionWS.deco){ 
+			courses = new CoursesWS();
+		}
+		else{
+			throw new Exception("cookie de connexion non-valide.");
+		}
+		return courses;
+	}
+	
+	@Override
+	public Updates getUpdates() throws Exception{
+		Updates updates = null;
+		if(token != null && !SessionWS.deco){
+			updates = new UpdatesWS();
+		}
+		else{
+			throw new Exception("cookie de connexion non-valide.");
+		}
+		return updates;
+	}
+	
+}

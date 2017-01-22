@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><project name="Application mobile d'e-Learning" company="Keil Laurent" webLink="" view-date="2012-10-08" view-index="0" gantt-divider-location="291" resource-divider-location="301" version="2.0">
+    <description><![CDATA[Gestion sous forme de planning du projet "application mobile d'e-Learning" [partie Keil Laurent - développement du mock et webservices]]]></description>
+    <view zooming-state="default:4" id="gantt-chart"/>
+    <view id="resource-table">
+        <field id="0" name="Nom" width="55" order="0"/>
+        <field id="1" name="Rôle par défaut" width="44" order="1"/>
+    </view>
+    <!-- -->
+    <calendars>
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <calendar id="1" name="default">
+                <default-week sun="1" mon="0" tue="0" wed="0" thu="0" fri="0" sat="1"/>
+                <overriden-day-types/>
+                <days/>
+            </calendar>
+        </day-types>
+    </calendars>
+    <tasks color="#8cb6ce">
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+        </taskproperties>
+        <task id="1" name="choix du projet individuel" color="#8cb6ce" meeting="false" start="2012-09-21" duration="5" complete="100" priority="1" expand="true"/>
+        <task id="0" name="compréhension du projet" color="#6666ff" shape="1,0,1,0,0,1,0,1,1,0,1,0,0,1,0,1" meeting="false" start="2012-10-01" duration="17" complete="100" priority="1" expand="true"/>
+        <task id="8" name="Définition du projet à réaliser et élaborations des exigences du client" color="#ff0000" shape="0,0,0,0,1,1,1,1,0,0,0,0,1,1,1,1" meeting="false" start="2012-10-05" duration="1" complete="100" priority="1" expand="true"/>
+        <task id="7" name="Elaboration en groupe des exigences et fonctionnalités de webcampus à exporter sur Android" color="#0000ff" meeting="false" start="2012-10-09" duration="1" complete="100" priority="1" expand="true"/>
+        <task id="2" name="rencontre promoteur LSC" color="#ff0000" shape="1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0" meeting="false" start="2012-10-12" duration="1" complete="100" priority="1" expand="true"/>
+        <task id="3" name="nouveau projet et redéfinition des exigences / instance de claroline à disposition" color="#ff0000" shape="0,0,0,0,1,1,1,1,0,0,0,0,1,1,1,1" meeting="false" start="2012-10-15" duration="1" complete="100" priority="1" expand="true"/>
+        <task id="10" name="Entretien avec Jean-Rock Meurisse (administrateur de WebCampus) : compréhension et définition des fonctionnalités de la plateforme et webservices" color="#ff0000" shape="1,0,0,0,1,0,0,0,1,0,0,0,1,1,1,1" meeting="false" start="2012-10-22" duration="1" complete="100" priority="1" expand="true"/>
+        <task id="9" name="Développement du mock et de l'API et consommation des webservices" meeting="false" start="2012-10-16" duration="47" complete="96" priority="1" expand="true"/>
+        <task id="15" name="étude des prérequis" color="#8cb6ce" meeting="false" start="2012-10-16" duration="19" complete="59" priority="1" expand="true"/>
+        <task id="13" name="description du projet" color="#8cb6ce" meeting="false" start="2012-10-16" duration="4" complete="100" priority="1" expand="true"/>
+        <task id="14" name="analyse des besoins" color="#8cb6ce" meeting="false" start="2012-10-22" duration="6" complete="100" priority="1" expand="true"/>
+        <task id="21" name="Description de l'API" color="#8cb6ce" meeting="false" start="2012-10-22" duration="10" complete="100" priority="1" expand="true"/>
+        <task id="22" name="Conception" color="#8cb6ce" meeting="false" start="2012-10-23" duration="6" complete="100" priority="1" expand="true"/>
+        <task id="11" name="Spécification" color="#8cb6ce" shape="1,1,1,0,1,1,0,0,1,0,0,0,0,0,0,0" meeting="false" start="2012-10-23" duration="30" complete="100" priority="1" expand="true"/>
+        <task id="24" name="gestion de l'authentification" color="#8cb6ce" meeting="false" start="2012-10-25" duration="33" complete="100" priority="1" expand="true"/>
+        <task id="25" name="webservices de bases" color="#8cb6ce" meeting="false" start="2012-10-29" duration="25" complete="100" priority="1" expand="true"/>
+        <task id="26" name="presentation de l'état d'avancement du projet sous forme power-point" color="#ff0000" meeting="false" start="2012-11-23" duration="1" complete="100" priority="1" expand="true"/>
+        <task id="28" name="Restructuration de l'application orienté objet" color="#8cb6ce" meeting="false" start="2012-11-23" duration="6" complete="100" priority="1" expand="true"/>
+        <task id="27" name="Réalisation du mock et des données tests" color="#8cb6ce" meeting="false" start="2012-11-28" duration="3" complete="100" priority="1" expand="true"/>
+        <task id="16" name="Implémentation" color="#8cb6ce" shape="0,1,1,0,1,1,1,1,1,1,1,1,0,1,1,0" meeting="false" start="2012-11-05" duration="31" complete="98" priority="1" expand="true"/>
+        <task id="17" name="documentation javadoc" color="#8cb6ce" shape="1,0,1,0,0,1,0,1,1,0,1,0,0,1,0,1" meeting="false" start="2012-12-03" duration="30" complete="100" priority="1" expand="true"/>
+        <task id="30" name="connexion a chouettecampus + test + correction" color="#8cb6ce" meeting="false" start="2012-12-06" duration="3" complete="100" priority="1" expand="true"/>
+        <task id="33" name="Présentation de la nouvelle structure de l'application et aide pour la suite" color="#ff3333" meeting="false" start="2012-12-13" duration="1" complete="100" priority="1" expand="true"/>
+        <task id="31" name="Serialisation + intéraction avec le projet partie client" color="#8cb6ce" meeting="false" start="2012-12-12" duration="2" complete="100" priority="1" expand="true"/>
+        <task id="18" name="tests" color="#8cb6ce" shape="1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1" meeting="false" start="2012-12-07" duration="6" complete="100" priority="1" expand="true"/>
+        <task id="32" name="diagramme de classes uml " color="#8cb6ce" meeting="false" start="2012-12-03" duration="8" complete="100" priority="1" expand="true"/>
+        <task id="19" name="Vérification/validation/ajout/déploiement" color="#8cb6ce" meeting="false" start="2012-12-03" duration="13" complete="50" priority="1" expand="true"/>
+        <task id="20" name="Finition du projet" color="#8cb6ce" meeting="false" start="2012-12-21" duration="31" complete="8" priority="1" expand="true"/>
+    </tasks>
+    <resources/>
+    <allocations/>
+    <vacations/>
+    <taskdisplaycolumns>
+        <displaycolumn property-id="tpd3" order="0" width="122"/>
+        <displaycolumn property-id="tpd4" order="1" width="52"/>
+        <displaycolumn property-id="tpd5" order="2" width="51"/>
+    </taskdisplaycolumns>
+    <previous/>
+    <roles roleset-name="Default"/>
+    <roles roleset-name="SoftwareDevelopment"/>
+</project>

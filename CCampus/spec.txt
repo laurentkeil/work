@@ -1,0 +1,265 @@
+Interface MockCCampus :
+	
+	Object login (String user, String password);
+	void closeSession (Object token);
+	JSONObject getUserData(Object token);
+	Array<Object> getCourses (Object token);
+	Object getCourseTool (Object token, String cours);
+	Array<Object> getDocs (Object token, String cours);
+	Array<Object> getAnnonces (Object token, String cours);
+	Object getSingleAnnonce (Object token, String cours, int resID);
+	List<Object> getUpdates(Object token);
+
+ version 1.0
+ description : interface du mock listant les fonctionnalités consommant les WebServices
+pouvant etre utilisées sur la partie client
+et etant implementées par CCampus.
+
+	login :
+	______
+		  
+		description :
+	 authentifie l'utilisateur user s'il est validé.
+		paramètre :
+	 user : identifiant de l utilisateur voulant se connecter.
+	 password : encodé par l'utilisateur voulant se connecter.
+		pré-condition :
+	 L'utilisateur user n'est pas déjà connecté.
+		Return :
+	 un cookie correspondant à l'utilisateur connecté pouvant être recuperé pendant une session active.
+		Exceptions :
+	 EmptyException : un champ vide a ete constaté.
+	 + autre exception à rajouter ...
+	 
+		Questions : 
+	 
+	 *Validation : avoir accès à la base de donnée ? non
+	 *Retourner un cookie et l'utiliser en paramètre dans chacune des autres méthodes ? oui..
+	 *Réel mock ou simple interface ? simple interface.
+	 
+	 closeSession
+	 ____________
+	 
+		description :
+	 deconnecte l utilisateur de la session
+		paramètre :
+	 token : Le cookie correspondant à l'utilisateur connecté.
+		pré-condition :
+	 L'utilisateur est déjà connecté.
+		Return :
+	 /
+
+	getUserData
+	___________
+	
+		description :
+	renvoie un objet JSON contenant une liste d'informations sur l'utilisateur connecté.
+		paramètre :
+	token : Le cookie correspondant à l'utilisateur connecté.
+		pré-condition :
+	L'utilisateur est déjà connecté.
+
+userId : int
+username : String
+firstName : String
+lastName : String
+language : String
+isCourseCreator : boolean
+isPlatformAdmin : boolean
+officialCode : String    (?)
+	
+	
+	
+	getCourses :
+	___________
+	
+		description :
+	renvoie la liste des cours de l'utilisateur connecté (chaque cours comportant une liste d'informations concernant ce cours).
+		paramètre :
+	token : Le cookie correspondant à l'utilisateur connecté.
+		pré-condition :
+	L'utilisateur est déjà connecté.
+	
+cours_id : int
+sysCode : String
+directory : String
+officialCode: String
+db: String
+title:String
+titular:String
+language:String
+access:String
+status:String
+sourceCourseId:String
+expirationDate:timestamp
+creationDate:timestamp
+isCourseManager:int           (boolean?)
+officialEmail:String
+notified:boolean
+
+getCourseTool : 
+_______________
+
+		description :
+	renvoie une liste de nouveautés et d'outils accessibles à l'utilisateur connecté pour un cours dans lequel il se trouve sur la platforme.
+		paramètre :
+	token : Le cookie correspondant à l'utilisateur connecté.
+		pré-condition :
+	L'utilisateur est déjà connecté.
+	
+sysCode : String
+isAnn:boolean
+annNotif:boolean
+isDnL:boolean
+dnlNotif:boolean
+
+getDocs :
+_________
+
+		description :
+	renvoie une liste de documents pour le cours "cours" (chaque document comportant une liste d'information concernant celui-ci)  auquel l'utilisateur connecté est inscrit.
+		paramètre :
+	token : Le cookie correspondant à l'utilisateur connecté.
+	cours : Le cours contenant la liste de documents à renvoyer.
+		pré-condition :
+	L'utilisateur est déjà connecté.
+	
+	cours:Object{sysCode:String}
+	path:String
+	name:String
+	type:int
+	isFolder:boolean
+	size:int
+	date:timestamp
+	extension:String
+	url:String
+	description:String
+	visibility:boolean
+	notified:boolean
+	
+	getFolder : path,name,description,type,date,visibility,notified
+
+	getAnnonces
+	___________
+	
+		description :
+	renvoie une liste d'annonces pour le cours "cours" (chaque annonce comportant une liste d'information concernant celle-ci) auquel l'utilisateur connecté est inscrit.
+		paramètre :
+	token : Le cookie correspondant à l'utilisateur connecté.
+	cours : Le cours contenant la liste de d'annonces à renvoyer.
+		pré-condition :
+	L'utilisateur est déjà connecté.
+	
+	title:String
+	content:String
+	visibleFrom:timestamp
+	visibleUntil:timestamp
+	time:timestamp
+	visibility:boolean
+	rank:int
+	notified:boolean
+	cours:Object{sysCode:String}
+	date:Date
+	ressourceId:int
+	
+	
+	getSingleAnnonce
+	________________
+	
+		description :
+	renvoie une liste d'informations concernant l'annonce identifiée par "resID" pour le cours "cours"  auquel l'utilisateur connecté est inscrit.
+		paramètre :
+	token : Le cookie correspondant à l'utilisateur connecté.
+	cours : Le cours contenant la liste d'informations à renvoyer.
+	resID : Le numéro identifiant l'annonce pour laquelle les informations sont renvoyées.
+		pré-condition :
+	L'utilisateur est déjà connecté.
+	
+	title:String
+	content:String
+	visibleFrom:timestamp
+	visibleUntil:timestamp
+	visibility:boolean
+	rank:int
+	cours:Object{sysCode:String}
+	ressourceId:int
+	date:timestamp
+	notified:boolean
+	
+	getUpdates
+	__________
+	
+		description :
+	renvoie une liste de cours pour le(s)quel(s) une/des modifications a/ont été apportée(s) depuis la dernière connexion de l'utilisateur connecté.
+	Ces cours comprennent une liste de modules (annonces, documents...) comprenant une liste de ressources comportant eux même un objet qui contient les informations sur la mise à jour de cette ressource.
+	 Forme : {syscode:{TagModule:{resID:Object}}}
+	
+	ressourceID : int
+	date : timestamp
+	
+	exemple : {"H1":{"CLANN":{"3":{"ressource_id":"3","date":"2012-11-21 17:56:34"}}},"B":{"CLANN":{"1":{"ressource_id":"1","date":"2012-11-21 17:57:01"}},"CLDOC":{"\/.Rhistory":{"ressource_id":"\/.Rhistory","date":"2012-11-21 17:57:10"}}}}} 
+		
+		{"B":{"CLANN":{"1":{"ressource_id":"1","date":"2012-11-21 17:57:01"},"2":{"ressource_id":"2","date":"2012-11-30 16:09:02"}},"CLDOC":{"\/.Rhistory":{"ressource_id":"\/.Rhistory","date":"2012-11-21 17:57:10"}}}}
+		
+		[] si rien
+		
+		
+		paramètre :
+	token : Le cookie correspondant à l'utilisateur connecté.
+		pré-condition :
+	L'utilisateur est déjà connecté.
+	
+	+++++++++++++++++++
+	+ Classe UserData +
+	+++++++++++++++++++
+	
+	
+		description : permet d'obtenir des informations séparément sur l'utilisateur connecté.
+		
+		méthodes :
+		
+		int getUserId (Object token)
+		String getUsername (Object token)
+		String getFirstName (Object token)
+		String getLastName (Object token)
+		String getLanguage (Object token)
+		boolean isCourseCreator (Object token)
+		boolean isPlatformAdmin (Object token)
+		String getOfficialCode (Object token)
+		
+	IDEM pour les autres classes :
+		
+	Courses
+	CourseTool 
+	Docs
+	Annonces 
+	SingleAnnonce 
+	Updates
+	
+	
+	Authentification :
+	__________________
+	
+	
+	Bon alors voilà : je développe un site intranet qui va piocher des données dans une base de données, et je dois utiliser java et ses servelts. Débutant en java, j'ai réussi à faire avancer un peu le problème. Mais là je bloque : je dois authentifier des utilisateurs. Et pour ce faire, je suis parti de l'idée suivante : 
+ 
+Je vérifie un couple user/pwd dans une base de données. Si c'est invalide, bien évidemment ca ne marche pas. Si cela est OK, je lui crée une session. Donc  si l'utilisateur a une session, c'est qu'il est identifié. 
+ 
+Le problème est qu'il faut qu'a chaque page, on vérifie qu'il s'agisse bien du bon utilsateur (tous n'ont pas accès aux memes pages), et que la  session n'a pas expirée. 
+ 
+Donc voici comment je procède : il passe par une page d'authentification qui lui donne un id session, et le stocke dans un cookie. 
+A chaque consultation de page, je cherche le cookie, je le compare avec ce qu'a le serveur en mémoire, et si ce n'est pas égal => dehors. 
+ 
+ 
+supprimer le mock et implémenter directement avec 
+object claroline => login(user, password) =>token 
+et 
+Session(token)
+
+dans session ::: closeSession ; getUserData ; getCourses ; getUpdates
+dans Courses ::: getCourseTool ; getDocs ; getAnnonces
+dans Annonces ::: getSingleAnnonce
+
+login : pas d acces BD; requette http, crée une session et recupere le cookie généré par claroline  
+
+getUserData renvoie un UserData.

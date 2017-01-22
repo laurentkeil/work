@@ -1,0 +1,83 @@
+import java.net.*;
+import java.io.*;
+import java.io.UnsupportedEncodingException;
+
+/**
+ * @author sniperx21x
+ *
+ */
+public class testURL {
+
+	/**
+	 * @param args
+	 * @return 
+	 * @throws UnsupportedEncodingException 
+	 */
+	
+	public static void main(String[] args) throws UnsupportedEncodingException {
+		testHttpURLConnexion ();
+	}
+	 
+	public static void testURLConnexion() {
+		
+		String url = "http://localhost:8080/pro/connexion";
+		
+		try {
+			
+			URL monURL = new URL(url);
+			URLConnection connexion = monURL.openConnection();
+			
+			InputStream flux = connexion.getInputStream();
+			int l = connexion.getContentLength();
+			
+			for(;l != 0; l--)
+			System.out.print((char)flux.read());
+			
+			// Fermeture de la connexion
+			flux.close();
+			
+		} catch (Exception e) {
+				e.printStackTrace();
+		}
+		
+	}
+	
+	public static void testEncodeURL() throws UnsupportedEncodingException {
+		try{
+		String url = "http://localhost:8080/pro/connexion";
+		System.out.println(URLEncoder.encode(url, "UTF-8"));
+		} catch (UnsupportedEncodingException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public static void testHttpURLConnexion () {
+
+		HttpURLConnection connexion = null;
+		
+		try {
+				URL url = new URL("https://chouettecampus.info.fundp.ac.be");
+		
+				System.out.println("Connexion a l'url ...");
+				connexion = (HttpURLConnection) url.openConnection();
+		
+				connexion.setAllowUserInteraction(true);
+				DataInputStream in = new DataInputStream(connexion.getInputStream());
+		
+				if (connexion.getResponseCode() != HttpURLConnection.HTTP_OK) {
+					System.out.println(connexion.getResponseMessage());
+				} else {
+					while (true) {
+						System.out.print((char) in.readUnsignedByte());
+					}
+				}
+			
+			} catch (Exception e) {
+				e.printStackTrace();
+			} finally {
+				connexion.disconnect();
+			}
+			System.exit(0);
+		}
+
+}
